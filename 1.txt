@@ -1,3 +1,54 @@
+
+//To print the array elements in reverse order using recursion
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void arrrev(int r,int a[])
+{
+	if(r>=0)
+	{
+		cout<<a[r]<<" ";
+		r--;
+		arrrev(r,a);
+	}	
+
+}
+
+
+int main() 
+{
+	int n;// input
+	cin>>n;
+
+	int a[n];
+	for(int i=0;i<n;i++) // reading array elements
+	{
+	cin>>a[i];
+	}
+	
+	cout<<"Before function call array elements are : \n";
+	for(int i=0;i<n;i++) // before call writing array elements
+	{
+	cout<<a[i]<<" ";
+	}
+	cout<<"\n";
+	
+	cout<<"After function call array elements are : \n";
+	int r=n-1;
+	arrrev(r,a);  // function call	
+	
+return 0;
+}
+
+
+
+
+******************************** FACTORIAL VALUE OF A GIVEN NUMBER USING RECURSION *********************************
+
+
+
 //Print the factorial value of a given number using recursion
 
 
